@@ -1,0 +1,59 @@
+.navbar{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 200px;
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bg_dark{
+    background-color: black;
+    color: white;
+}
+
+.brand a{
+   display: flex;
+   justify-content: space-between;
+   text-decoration: none;
+}
+
+.brand .text{
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 40px;
+}
+
+.brand .logo{
+    height: 40px;
+    width: 40px;
+}
+
+.actions{
+    
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (max-width: 900px) {
+    .navbar{
+        justify-content: space-around;
+        padding: 0px;
+    }
+
+    .actions{
+        display: none;
+    }
+}
+
+@media (min-width: 900px){
+    .menu_hamburger{
+        display: none;
+    }
+
+    .empty{
+        display: none;
+    }
+}

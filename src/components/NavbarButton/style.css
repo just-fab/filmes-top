@@ -1,0 +1,23 @@
+
+.navbar_btn{
+    position: relative;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: #000;
+    border:none;
+    transition: 0.3s background;
+}
+
+.navbar_btn:hover{
+    cursor:pointer;
+    background-color: #696969;
+}
+
+.cs_list_item_text span{
+    font-size: 0.9em;
+}
