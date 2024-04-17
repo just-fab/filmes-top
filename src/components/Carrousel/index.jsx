@@ -37,12 +37,13 @@ export default function Carrousel(props) {
         setActual(0);
       }
     }, 7000);
+
     return () => {
       clearInterval(interval);
     };
   }, [actual, state.movies_highlight.length]);
 
-  return (
+  return (state.movies_highlight.length > 0 &&
     <div
       className="card carrousel"
       style={{
@@ -58,7 +59,9 @@ export default function Carrousel(props) {
         </button>
         <div className="pos_rel">
           <div className="text">
-            <h2 className="text_white">{state.movies_highlight[actual].title}</h2>
+            <h2 className="text_white">
+              {state.movies_highlight[actual].title}
+            </h2>
           </div>
         </div>
         <button
@@ -68,7 +71,6 @@ export default function Carrousel(props) {
           <FontAwesomeIcon icon={faChevronRight} size="2x" />
         </button>
       </div>
-      <div className="promo">{props.price}</div>
     </div>
   );
 }

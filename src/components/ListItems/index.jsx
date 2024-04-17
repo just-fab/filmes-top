@@ -4,9 +4,9 @@ import { GlobalContext } from "../../contexts/AppContext";
 
 export default function ListItems() {
   const theContext = useContext(GlobalContext);
-  const { state, setState } = theContext;
+  const { state } = theContext;
   
-  return (
+  return (state.movies_list.length > 0 &&
     <>
       {state.movies_list.map((p) => (
         <ItemCard
