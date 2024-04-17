@@ -22,22 +22,22 @@ transition: 0.5s transform;
     object-fit: cover;
 }
 
-.price_holder{
+.info_holder{
     width: 75%;
 }
-.price_holder h4{
+.info_holder h4{
     padding: 3px 10px;
     border-radius: 9px;
 }
 
 @media (max-width: 768px) {
-    .price_holder{
+    .info_holder{
         width: 85%;
     }
 }
   
 @media (max-width: 576px) {
-    .price_holder{
+    .info_holder{
         width: 95%;
     }
 }

@@ -40,7 +40,7 @@ code {
 
 .d_grid_2{
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 4 colunas em telas grandes */
+  grid-template-columns: repeat(6, 2fr); /* 4 colunas em telas grandes */
   gap: 15px;
 }
 

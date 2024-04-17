@@ -1,47 +1,22 @@
-import { useContext, useEffect, useState } from "react";
-import load from "../../mockdata/produtos"
-//import load from "../../util/loadProducts";
+import { useContext } from "react";
 import ItemCard from "../ItemCard";
 import { GlobalContext } from "../../contexts/AppContext";
 
-export default function ListItems(){
-
-    const[produtos, setProdutos] = useState([])
-    const theContext = useContext(GlobalContext);
-    const {setState} = theContext;
-
-    
-    function toggleCart(p){
-        setState(prevState => ({...prevState, "show_add_cart_modal" : !prevState.show_add_cart_modal, "selected_product": p}))
-    }
-
-    /*function echo(){
-        console.log('echo')
-    }*/
-
-    useEffect(()=>{
-        loadProds()
-    }, [])
-
-    async function loadProds(){
-        //const listProd = await load();
-        //setProdutos(listProd)
-        setProdutos(load)
-    }
-
-    //const products = loadMock;
-    
-
-    return(
-        <>
-            {produtos.map((p)=>(
-            <ItemCard key={p.id} 
-            title={p.nome} 
-            price={p.preco} 
-            measurement={p.texto_medida || p.unidadeMedidaEnum}
-            img={p.pathImg}
-            onClick={()=>toggleCart(p)}/>
-            ))}
-        </>
-    )
+export default function ListItems() {
+  const theContext = useContext(GlobalContext);
+  const { state, setState } = theContext;
+  
+  return (
+    <>
+      {state.movies_list.map((p) => (
+        <ItemCard
+          key={p.id}
+          title={p.title}
+          rated={p.vote_average}
+          img={`https://image.tmdb.org/t/p/w500${p.poster_path}`}
+          onClick={() => {console.log(p)}}
+        />
+      ))}
+    </>
+  );
 }
