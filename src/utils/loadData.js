@@ -74,3 +74,15 @@ export function loadMovie(id){
       return response.data;
     });
 }
+
+export function loadCredits(id){
+  return axios
+    .get(`https://api.themoviedb.org/3/movie/${id}/credits`, { params:{
+        api_key: "2581d8cef7f543038b77d3cbecc728d5",
+        language: "pt-BR",
+      }
+    })
+    .then((response) => {
+      return response.data;
+    });
+}
