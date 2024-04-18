@@ -45,7 +45,7 @@ export default function Carrousel(props) {
   }, [actual, state.movies_highlight.length]);
 
   return (state.movies_highlight.length > 0 &&
-    <Box className="d_flex js_center mt_3 w_60"> 
+    <Box className="d_flex js_center mt_3 w_60" onClick={()=>{props.onHandleClick(state.movies_highlight[actual])}}> 
       <div
         className="card carrousel"
         style={{

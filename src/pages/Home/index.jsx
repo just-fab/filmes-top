@@ -1,5 +1,5 @@
 import Carrousel from "../../components/Carrousel";
-import MainLayout from "../../Layouts/MainLayout";
+import MainLayout from "../../layouts/MainLayout";
 import ListItems from "../../components/ListItems";
 import Separator from "../../components/Separator";
 import Genres from "../../components/Genres"
@@ -59,8 +59,8 @@ export default function Home() {
         {state.movies_list.length > 0 && 
           <>
             <Separator name="Destaques"  />
-            <Carrousel />
-            <Separator name="Descubra filmes"  />
+            <Carrousel onHandleClick={selectItem}/>
+            <Separator name="Descubra filmes" addClass="mt_2" />
             <Genres list={state.movie_genres} onHandleClick={addGenre} selected={state.search_genres}/>
             <ListItems movies={state.movies_list} onHandleChange={changePage} onHandleClick={selectItem}/>
           </>

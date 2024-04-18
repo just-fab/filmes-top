@@ -1,5 +1,5 @@
 
-.navbar_btn{
+.circle_btn{
     position: relative;
     height: 40px;
     width: 40px;
@@ -13,7 +13,7 @@
     transition: 0.3s background;
 }
 
-.navbar_btn:hover{
+.circle_btn:hover{
     cursor:pointer;
     background-color: purple;
 }
