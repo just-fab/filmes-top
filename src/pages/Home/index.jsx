@@ -1,5 +1,5 @@
 import Carrousel from "../../components/Carrousel";
-import MainLayout from "../../layouts/MainLayout";
+import MainLayout from "../../Layouts/MainLayout";
 import ListItems from "../../components/ListItems";
 import Separator from "../../components/Separator";
 import Genres from "../../components/Genres"

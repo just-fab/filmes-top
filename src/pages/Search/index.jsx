@@ -1,6 +1,6 @@
 import { GlobalContext } from "../../contexts/AppContext";
 import { useState, useContext, useEffect } from "react";
-import MainLayout from "../../layouts/MainLayout";
+import MainLayout from "../../Layouts/MainLayout";
 import Genres from "../../components/Genres";
 import { useNavigate } from "react-router-dom";
 import { loadFilteredMovies } from "../../utils/loadData";

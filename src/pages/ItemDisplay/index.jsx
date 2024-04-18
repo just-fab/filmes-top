@@ -1,4 +1,4 @@
-import Layout from '../../layouts/Layout'
+import Layout from '../../Layouts/Layout'
 import Highlight from '../../components/Highlight'
 import { GlobalContext } from '../../contexts/AppContext';
 import { useContext, useEffect } from 'react';
