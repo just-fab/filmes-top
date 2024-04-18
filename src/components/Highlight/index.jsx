@@ -26,7 +26,7 @@ export default function Highlight(props){
                             <p className="mt_2">{props.obj.overview}</p>
                         </Box>
                         <Box className="d_flex flex_wrap">
-                            <h4>Duração: {(props.obj.runtime/60).toFixed(2)}h</h4>
+                            <h4>Duração: {Math.floor(props.obj.runtime/60)}h{props.obj.runtime%60}min</h4>
                             <h4>Data de lançamento: {props.obj.release_date}</h4>
                             <h4>Linguaguem: {props.obj.original_language}</h4>
                         </Box>

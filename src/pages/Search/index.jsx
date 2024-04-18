@@ -5,6 +5,8 @@ import Genres from "../../components/Genres";
 import { useNavigate } from "react-router-dom";
 import { loadFilteredMovies } from "../../utils/loadData";
 import ListItems from "../../components/ListItems";
+import CircleButton from "../../components/CircleButton";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 export default function Search() {
   const theContext = useContext(GlobalContext);
@@ -55,6 +57,7 @@ export default function Search() {
 
   return (
     <MainLayout>
+      <CircleButton type="voltar" icon={faArrowLeft} action={()=>{navigate('/')}} addClass="top_left"/>
       <Genres
         list={state.movie_genres}
         onHandleClick={addGenre}
