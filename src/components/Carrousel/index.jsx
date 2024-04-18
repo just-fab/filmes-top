@@ -13,8 +13,10 @@ export default function Carrousel(props) {
   const { state } = theContext;
   const [actual, setActual] = useState(0);
 
-  function rightAction() {
-    console.log("right ", actual, " ", state.movies_highlight.length);
+  function rightAction(e) {
+
+    e.stopPropagation();
+
     if (actual < state.movies_highlight.length - 1) {
       setActual(actual + 1);
     } else {
@@ -22,7 +24,8 @@ export default function Carrousel(props) {
     }
   }
 
-  function leftAction() {
+  function leftAction(e) {
+    e.stopPropagation();
     if (actual === 0) {
       setActual(state.movies_highlight.length - 1);
     } else {
@@ -45,16 +48,17 @@ export default function Carrousel(props) {
   }, [actual, state.movies_highlight.length]);
 
   return (state.movies_highlight.length > 0 &&
-    <Box className="d_flex js_center mt_3 w_60" onClick={()=>{props.onHandleClick(state.movies_highlight[actual])}}> 
-      <div
+    <Box className="d_flex js_center mt_3 w_60">
+      <Box
         className="card carrousel"
+        onClick={() => { props.onHandleClick(state.movies_highlight[actual]) }}
         style={{
-          backgroundImage: `url(https://image.tmdb.org/t/p/w500${state.movies_highlight[actual].backdrop_path})`,
+          backgroundImage: `url(https://image.tmdb.org/t/p/w1280${state.movies_highlight[actual].backdrop_path})`,
         }}
       >
         <div className="organizer d_flex js_between text_white px_1">
           <button
-            className="left_action d_flex flex_dir_column js_center text_white"
+            className="left_action above_all d_flex flex_dir_column js_center text_white"
             onClick={leftAction}
           >
             <FontAwesomeIcon icon={faChevronLeft} size="2x" />
@@ -67,13 +71,13 @@ export default function Carrousel(props) {
             </div>
           </div>
           <button
-            className="right_action d_flex flex_dir_column js_center text_white"
+            className="right_action above_all d_flex flex_dir_column js_center text_white"
             onClick={rightAction}
           >
             <FontAwesomeIcon icon={faChevronRight} size="2x" />
           </button>
         </div>
-      </div>
+      </Box>
     </Box>
   );
 }

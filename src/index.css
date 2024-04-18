@@ -52,6 +52,8 @@ code {
 /*POSICOES*/
 .relative{position:relative;}.absolute{position: absolute;}
 .top_left{position:absolute; top: 60px; left: 5%; z-index: 999;}
+.above_all{z-index: 999;}
+.under_all{z-index:-1;}
 
  /* BORDAS */
 .test_border{
