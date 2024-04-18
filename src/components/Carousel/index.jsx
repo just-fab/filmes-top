@@ -8,7 +8,7 @@ import { useEffect, useState, useContext } from "react";
 import { GlobalContext } from "../../contexts/AppContext";
 import { Box } from "@mui/material";
 
-export default function Carrousel(props) {
+export default function Carousel(props) {
   const theContext = useContext(GlobalContext);
   const { state } = theContext;
   const [actual, setActual] = useState(0);
