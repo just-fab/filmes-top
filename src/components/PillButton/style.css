@@ -8,13 +8,14 @@
 }
 
 .pillbutton:hover{
-    background-color: gray;
+    background-color: #ccc;
+    border: 1px solid #ccc;
     cursor: pointer;
 }
 
 .active{
-    background-color: aquamarine;
-    border:none;
+    background-color: #6ac9fe;
+    border:1px solid #6ac9fe;
 }
 
 .active:hover{

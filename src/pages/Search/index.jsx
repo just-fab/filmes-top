@@ -57,7 +57,7 @@ export default function Search() {
 
   return (
     <MainLayout>
-      <CircleButton type="voltar" icon={faArrowLeft} action={()=>{navigate('/')}} addClass="top_left"/>
+      <CircleButton type="voltar2" icon={faArrowLeft} action={()=>{navigate('/')}} addClass="top_left"/>
       <Genres
         list={state.movie_genres}
         onHandleClick={addGenre}
