@@ -1,0 +1,23 @@
+.pillbutton{
+    border-radius: 50px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    font-size: 0.8em;
+    height: 20px;
+}
+
+.pillbutton:hover{
+    background-color: gray;
+    cursor: pointer;
+}
+
+.active{
+    background-color: aquamarine;
+    border:none;
+}
+
+.active:hover{
+    background-color: cornflowerblue;
+    border: 1px solid black;
+}

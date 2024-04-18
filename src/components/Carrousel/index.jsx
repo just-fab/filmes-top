@@ -6,6 +6,7 @@ import "./style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState, useContext } from "react";
 import { GlobalContext } from "../../contexts/AppContext";
+import { Box } from "@mui/material";
 
 export default function Carrousel(props) {
   const theContext = useContext(GlobalContext);
@@ -44,33 +45,35 @@ export default function Carrousel(props) {
   }, [actual, state.movies_highlight.length]);
 
   return (state.movies_highlight.length > 0 &&
-    <div
-      className="card carrousel"
-      style={{
-        backgroundImage: `url(https://image.tmdb.org/t/p/w500${state.movies_highlight[actual].backdrop_path})`,
-      }}
-    >
-      <div className="organizer d_flex js_between text_white px_1">
-        <button
-          className="left_action d_flex flex_dir_column js_center text_white"
-          onClick={leftAction}
-        >
-          <FontAwesomeIcon icon={faChevronLeft} size="2x" />
-        </button>
-        <div className="pos_rel">
-          <div className="text">
-            <h2 className="text_white">
-              {state.movies_highlight[actual].title}
-            </h2>
+    <Box className="d_flex js_center mt_3 w_60"> 
+      <div
+        className="card carrousel"
+        style={{
+          backgroundImage: `url(https://image.tmdb.org/t/p/w500${state.movies_highlight[actual].backdrop_path})`,
+        }}
+      >
+        <div className="organizer d_flex js_between text_white px_1">
+          <button
+            className="left_action d_flex flex_dir_column js_center text_white"
+            onClick={leftAction}
+          >
+            <FontAwesomeIcon icon={faChevronLeft} size="2x" />
+          </button>
+          <div className="pos_rel">
+            <div className="text">
+              <h2 className="text_white">
+                {state.movies_highlight[actual].title}
+              </h2>
+            </div>
           </div>
+          <button
+            className="right_action d_flex flex_dir_column js_center text_white"
+            onClick={rightAction}
+          >
+            <FontAwesomeIcon icon={faChevronRight} size="2x" />
+          </button>
         </div>
-        <button
-          className="right_action d_flex flex_dir_column js_center text_white"
-          onClick={rightAction}
-        >
-          <FontAwesomeIcon icon={faChevronRight} size="2x" />
-        </button>
       </div>
-    </div>
+    </Box>
   );
 }

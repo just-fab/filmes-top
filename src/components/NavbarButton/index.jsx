@@ -1,4 +1,3 @@
-import Badge from "../Badge";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSignIn,
@@ -40,7 +39,6 @@ export default function NavbarButton(props) {
         }
       >
         <FontAwesomeIcon icon={props.icon} size="xl" />
-        {props.notify && <Badge text={props.text} />}
       </button>
 
       {props.btn_type === "menu_button" && (

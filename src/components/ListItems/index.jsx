@@ -1,22 +1,23 @@
-import { useContext } from "react";
 import ItemCard from "../ItemCard";
-import { GlobalContext } from "../../contexts/AppContext";
+import { Box, Pagination } from "@mui/material";
 
-export default function ListItems() {
-  const theContext = useContext(GlobalContext);
-  const { state } = theContext;
-  
-  return (state.movies_list.length > 0 &&
-    <>
-      {state.movies_list.map((p) => (
-        <ItemCard
-          key={p.id}
-          title={p.title}
-          rated={p.vote_average}
-          img={`https://image.tmdb.org/t/p/w500${p.poster_path}`}
-          onClick={() => {console.log(p)}}
-        />
-      ))}
-    </>
-  );
+export default function ListItems(props) {
+  return (
+      <>
+        <Box className="d_grid_2 w_60 mt_1 mb_3">
+          {props.movies.map((p) => (
+            <Box key={p.id} onClick={() => {
+              props.onHandleClick(p)
+            }}>
+              <ItemCard
+              obj={p}
+              />
+            </Box>
+          ))}
+        </Box>
+        <Box className="clear">
+          <Pagination count={10} page={props.page} onChange={props.onHandleChange} />
+        </Box>
+      </>
+    )
 }

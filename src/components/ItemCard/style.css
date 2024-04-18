@@ -17,7 +17,7 @@ transition: 0.5s transform;
 
 .product_card img{
     width: 100%;
-    border-radius: 18px 18px 0px 0px;
+    border-radius: 15px 15px 0px 0px;
     background-color: white;
     object-fit: cover;
 }
@@ -25,9 +25,27 @@ transition: 0.5s transform;
 .info_holder{
     width: 75%;
 }
-.info_holder h4{
+
+h3{
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+h4{
+    margin-top: 1px;
+    margin-bottom: 1px;
     padding: 3px 10px;
     border-radius: 9px;
+}
+
+h5{
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-right: 2px;
+    margin-left: 2px;
+    padding: 2px 7px;
+    border-radius: 9px;
+    font-size: 0.8em;
 }
 
 @media (max-width: 768px) {

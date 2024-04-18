@@ -14,7 +14,7 @@ export default function Navbar(props) {
     <div className="navbar bg_dark">
       <MenuHamburger className="menu_hamburger" />
       <div className="brand">
-        <a href="/home">
+        <a href="/">
           <img
             className="logo"
             src={require("../../assets/logo192.png")}
