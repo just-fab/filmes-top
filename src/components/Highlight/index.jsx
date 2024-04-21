@@ -2,7 +2,6 @@ import { Box } from "@mui/material";
 import { faHeart, faListUl } from "@fortawesome/free-solid-svg-icons";
 import CircleButton from "../CircleButton";
 import './style.css'
-//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Highlight(props){
     return(
